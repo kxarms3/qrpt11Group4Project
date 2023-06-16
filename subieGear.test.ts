@@ -2,10 +2,11 @@ import {jetsPageObject} from './jetPageObject';
 const jet = new jetsPageObject();
 const fs = require('fs');
 
-describe("Testing Subaru Gear, Subaru Stories & Preferred Retailer", () => {
+describe("Testing Subaru Gear, Subaru Drive & Preferred Retailer", () => {
     test ("Subaru Gear", async () => {
         await jet.navigate();
         await jet.click(jet.popUp);
+        //this closes the cookies pop-up window in order to help it see the footer 
         await jet.driver.manage().window().maximize();
         await jet.click(jet.subieGear);
         await jet.driver.sleep(3000)
@@ -22,15 +23,16 @@ describe("Testing Subaru Gear, Subaru Stories & Preferred Retailer", () => {
         await jet.subaruTabs();*/
       
     });
-    test ("Subary Stories", async () => {
+    test ("Subary Drive", async () => {
         await jet.navigate();
         await jet.driver.manage().window().maximize();
-        //this will help scroll
+        //this will help scroll or see the footer
         await jet.getElement(jet.subieDrive);
         await jet.driver.sleep(3000)
         await jet.click(jet.subieDrive);
         await jet.driver.sleep(3000)
         await jet.subaruTabs();
+        //this closes the tab it opened and go back to the main page
        
     })
     test ("Preferred Retailer", async () => {
