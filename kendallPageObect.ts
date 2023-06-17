@@ -10,7 +10,7 @@ export class kendallsPage extends BasePage {
     buildAndPrice: By=By.xpath('(//li[@class="main-navigation__nav-group-item"])[2]')
     ascent2023: By=By.xpath('(//p[@class="vehicle-card__name vehicle-name horizontal-text-center"])[4]')
     nextButton: By=By.xpath('//button[@class="pages-footer__build-cta cta cta--primary-alt"]')
-    
+    popUp: By=By.xpath('(//button[@id="privacy-policy-close"])'); 
 
 
 

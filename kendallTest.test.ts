@@ -3,10 +3,9 @@ const ken = new kendallsPage()
 const fs = require('fs')
 test('facebook test',async () => {
     await ken.navigate()
+    await ken.driver.manage().window().maximize();
     await ken.driver.sleep(3000)
-    await ken.getElement(ken.facebookIcon)
-    await ken.click(ken.facebookIcon)
-    await ken.socialTabs()
+    await ken.click(ken.popUp);
     await ken.getElement(ken.instagramIcon)
     await ken.click(ken.instagramIcon)
     await ken.socialTabs()
@@ -16,6 +15,11 @@ test('facebook test',async () => {
     await ken.getElement(ken.youtubeIcon)
     await ken.click(ken.youtubeIcon)
     await ken.socialTabs()
+    await ken.getElement(ken.facebookIcon)
+    await ken.driver.sleep(3000)
+    await ken.click(ken.facebookIcon)
+    await ken.socialTabs()
+    
 })
 
 test('build and price test',async () => {

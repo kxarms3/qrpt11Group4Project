@@ -10,10 +10,9 @@ describe("Testing Subaru Gear, Subaru Drive & Preferred Retailer", () => {
         await jet.driver.manage().window().maximize();
         await jet.click(jet.subieGear);
         await jet.driver.sleep(3000)
-        await jet.subaruTabs();
-          //the above closes the tab and goes back to the first tab
 
         /*
+        await jet.getElement(jet.searchBar);
         await jet.setInput(jet.searchBar,"tech cloth\n")
         await jet.driver.sleep(3000)
         await jet.click(jet.techCloth);
@@ -21,6 +20,10 @@ describe("Testing Subaru Gear, Subaru Drive & Preferred Retailer", () => {
         await jet.click(jet.cartIcon);
         await jet.click(jet.checkout);
         await jet.subaruTabs();*/
+
+        await jet.subaruTabs();
+          //the above closes the tab and goes back to the first tab
+
       
     });
     test ("Subary Drive", async () => {
