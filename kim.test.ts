@@ -70,7 +70,8 @@ describe("Testing the Subaru Website", () => {
         await kim.click(kim.selectNextColor);
         await kim.driver.sleep(4000);
 
-        //expect kim.verifyCorrectBuild.toBe("$32,190)";
+        let resultsTestTwo = await kim.getText(kim.verifyCorrectBuild);
+        expect (resultsTestTwo).toContain("$32,190");
     
         await kim.driver.quit();
 
