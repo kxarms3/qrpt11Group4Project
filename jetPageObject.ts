@@ -21,6 +21,7 @@ export class jetsPageObject extends BasePage {
     storyAdventure: By=By.xpath('//span[@data-soa-analytics-link-name="908_dear_subaru:category-filter_adventure_id::adventure"]')
     popUp: By=By.xpath('(//button[@id="privacy-policy-close"])'); 
     subieDrive: By=By.xpath('//a[@data-id="Subaru Drive"]');
+    shopOutdrLf: By=By.xpath('(//div[@class="contentbox1button"])');
 constructor () {
     super ({url:"https://www.subaru.com/"})
 

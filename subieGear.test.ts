@@ -10,20 +10,8 @@ describe("Testing Subaru Gear, Subaru Drive & Preferred Retailer", () => {
         await jet.driver.manage().window().maximize();
         await jet.click(jet.subieGear);
         await jet.driver.sleep(3000)
-
-        /*
-        await jet.getElement(jet.searchBar);
-        await jet.setInput(jet.searchBar,"tech cloth\n")
-        await jet.driver.sleep(3000)
-        await jet.click(jet.techCloth);
-        await jet.click(jet.addToCart);
-        await jet.click(jet.cartIcon);
-        await jet.click(jet.checkout);
-        await jet.subaruTabs();*/
-
         await jet.subaruTabs();
           //the above closes the tab and goes back to the first tab
-
       
     });
     test ("Subary Drive", async () => {
@@ -51,6 +39,7 @@ appears to offer hybrid but it's not an authorized hybrid retailer*/
         await jet.click(jet.hybridRetailer);
         await jet.driver.sleep(3000)
         await jet.click(jet.contactAndServices);
+        await jet.driver.sleep(3000)
         fs.writeFile(`${__dirname}/jetScreenShot.png`,
         await jet.driver.takeScreenshot(), "base64",
         (e) => {
@@ -61,3 +50,4 @@ appears to offer hybrid but it's not an authorized hybrid retailer*/
 });
 
 });
+

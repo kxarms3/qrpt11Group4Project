@@ -6,18 +6,22 @@ test('facebook test',async () => {
     await ken.driver.manage().window().maximize();
     await ken.driver.sleep(3000)
     await ken.click(ken.popUp);
+    await ken.driver.sleep(3000)
     await ken.getElement(ken.instagramIcon)
     await ken.click(ken.instagramIcon)
+    await ken.driver.sleep(3000)
     await ken.socialTabs()
     await ken.getElement(ken.tiktokIcon)
     await ken.click(ken.tiktokIcon)
+    await ken.driver.sleep(3000)
     await ken.socialTabs()
     await ken.getElement(ken.youtubeIcon)
     await ken.click(ken.youtubeIcon)
+    await ken.driver.sleep(3000)
     await ken.socialTabs()
     await ken.getElement(ken.facebookIcon)
-    await ken.driver.sleep(3000)
     await ken.click(ken.facebookIcon)
+    await ken.driver.sleep(3000)
     await ken.socialTabs()
     
 })
