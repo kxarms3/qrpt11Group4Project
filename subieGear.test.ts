@@ -51,6 +51,12 @@ appears to offer hybrid but it's not an authorized hybrid retailer*/
         await jet.click(jet.hybridRetailer);
         await jet.driver.sleep(3000)
         await jet.click(jet.contactAndServices);
+        fs.writeFile(`${__dirname}/jetScreenShot.png`,
+        await jet.driver.takeScreenshot(), "base64",
+        (e) => {
+            if (e) console.log(e)
+            else console.log("pictureSave")
+        })
         await jet.driver.quit()
 });
 
